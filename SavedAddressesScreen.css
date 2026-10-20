@@ -1,0 +1,27 @@
+.saved-address-card {
+  max-width: 680px;
+  margin: var(--sp-lg) auto;
+  padding: var(--sp-lg);
+}
+
+.saved-address-heading {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  margin-bottom: var(--sp-lg);
+}
+
+.saved-address-heading h3,
+.saved-address-heading p {
+  margin: 0;
+}
+
+.saved-address-heading p {
+  color: var(--clr-dark-gray);
+  margin-top: 4px;
+}
+
+.saved-address-success {
+  color: var(--clr-success, #2e7d32);
+  margin: 0 0 var(--sp-sm);
+}

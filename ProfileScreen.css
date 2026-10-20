@@ -1,0 +1,255 @@
+/* ProfileScreen.css — Styles for the Profile Screen */
+
+.profile-screen {
+  background: var(--clr-off-white);
+}
+
+/* ---- Profile Card ---- */
+.profile-card {
+  margin: var(--sp-md);
+  padding: var(--sp-lg);
+}
+.profile-avatar-section {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-md);
+}
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--clr-forest), var(--clr-forest-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 3px solid var(--clr-gold);
+}
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.avatar-initials {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  color: var(--clr-gold);
+  font-weight: 700;
+}
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+.profile-name {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  color: var(--clr-forest);
+}
+.profile-email {
+  font-size: 0.85rem;
+  color: var(--clr-gray);
+}
+.profile-phone {
+  font-size: 0.85rem;
+  color: var(--clr-dark-gray);
+  margin-top: 2px;
+}
+
+/* Edit Profile */
+.edit-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--clr-off-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-forest);
+  transition: all var(--transition);
+}
+.edit-btn:hover {
+  background: var(--clr-forest);
+  color: var(--clr-gold);
+}
+.edit-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+}
+.edit-input {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+.edit-actions {
+  display: flex;
+  gap: var(--sp-sm);
+}
+.profile-edit-form {
+  max-width: 600px;
+  margin: var(--sp-md) auto;
+  padding: var(--sp-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+}
+.profile-photo-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-sm);
+  margin-bottom: var(--sp-sm);
+}
+.profile-avatar-large { width: 112px; height: 112px; }
+.photo-picker { cursor: pointer; }
+.profile-photo-editor small { color: var(--clr-gray); }
+.btn-sm {
+  padding: 6px 16px;
+  font-size: 0.8rem;
+}
+
+/* ---- Menu Items ---- */
+.profile-menu {
+  margin: 0 var(--sp-md) var(--sp-md);
+  overflow: hidden;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-md);
+  padding: var(--sp-md);
+  width: 100%;
+  background: none;
+  text-align: left;
+  transition: background var(--transition);
+  border-bottom: 1px solid var(--clr-light-gray);
+}
+.menu-item:last-child {
+  border-bottom: none;
+}
+.menu-item:hover {
+  background: var(--clr-off-white);
+}
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(10, 38, 29, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-forest);
+  flex-shrink: 0;
+}
+.admin-icon {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--clr-gold-dark);
+}
+.admin-item {
+  background: rgba(212, 175, 55, 0.04);
+}
+.logout-icon {
+  background: rgba(231, 76, 60, 0.08);
+  color: var(--clr-danger);
+}
+.instagram-menu {
+  overflow: hidden;
+}
+.instagram-icon {
+  background: linear-gradient(135deg, rgba(131, 58, 180, 0.15), rgba(225, 48, 108, 0.15));
+  color: #c13584;
+}
+.instagram-arrow-open {
+  transform: rotate(90deg);
+  transition: transform var(--transition);
+}
+.instagram-pages {
+  border-top: 1px solid var(--clr-light-gray);
+  background: rgba(248, 246, 241, 0.5);
+}
+.instagram-page-link {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-md);
+  padding: 12px var(--sp-md) 12px 72px;
+  color: #c13584;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--clr-light-gray);
+}
+.instagram-page-link:last-child {
+  border-bottom: none;
+}
+.instagram-page-link:hover {
+  background: var(--clr-white);
+}
+.instagram-page-link span {
+  flex: 1;
+}
+.menu-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.menu-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--clr-text);
+}
+.menu-desc {
+  font-size: 0.75rem;
+  color: var(--clr-gray);
+  margin-top: 2px;
+}
+.menu-arrow {
+  color: var(--clr-gray);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .profile-card,
+  .profile-menu {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* Google Button on Profile */
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 20px;
+  border: 1.5px solid var(--clr-light-gray);
+  border-radius: var(--radius-sm);
+  background: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+.btn-google:hover {
+  border-color: var(--clr-gold);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+.btn-google:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+.field-error {
+  font-size: 0.8rem;
+  color: var(--clr-danger);
+}
+.google-menu-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+}
